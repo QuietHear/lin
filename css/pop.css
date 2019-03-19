@@ -1,0 +1,36 @@
+.pop-bg .msg-pop {
+  z-index: 1;
+  box-shadow: 0 0 24px rgba(146, 146, 146, 0.75);
+  background: #fff8ea; }
+  .pop-bg .msg-pop .content {
+    margin: 60px 0 55px; }
+.pop-bg .success-pop {
+  z-index: 1;
+  box-shadow: 0 0 24px rgba(146, 146, 146, 0.75);
+  background: #ecf7ff; }
+  .pop-bg .success-pop .content {
+    margin-bottom: 35px; }
+.pop-bg .fail-pop {
+  z-index: 1;
+  box-shadow: 0 0 24px rgba(146, 146, 146, 0.75);
+  background: #ecf7ff; }
+  .pop-bg .fail-pop .content {
+    margin-bottom: 35px; }
+.pop-bg .changPhoneFirst-pop .content .form-item .phone {
+  justify-content: normal; }
+.pop-bg .login-pop .title {
+  font-size: 14px;
+  margin-top: 65px; }
+  .pop-bg .login-pop .title .between {
+    margin: 15px 0 6px; }
+.pop-bg .login-pop .content {
+  margin-bottom: 0; }
+.pop-bg .login-pop > a {
+  color: #747474;
+  display: inline-block;
+  margin: 10px 0 20px 62px;
+  cursor: pointer; }
+.pop-bg .login-pop .add {
+  margin-bottom: 66px; }
+
+/*# sourceMappingURL=pop1.css.map */

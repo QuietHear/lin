@@ -1,0 +1,288 @@
+@charset "utf-8";
+//HTML标准元素统一设置
+html, body {
+  height: 100%;
+}
+// 临时数据
+html{
+  height: 1080px;
+  width: 1920px;
+}
+
+body { //数字取新罗马字，汉字取微软雅黑
+  font: normal normal 14px "Times New Roman", "Microsoft YaHei";
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("../img/bg.jpg") 100% 100% no-repeat;
+  padding-top: 34px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  line-height: 1;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, b, u, i, s, em, strong {
+  font-weight: normal;
+  font-size: unset;
+  text-decoration: none;
+  font-style: normal;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+//自定义图标公共样式
+.icon {
+  background: url("../img/icon.png") no-repeat;
+  display: inline-block;
+  cursor: pointer;
+}
+
+//弹窗公共样式
+.pop-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .44);
+  display: none;
+  z-index: 1000;
+  &.show {
+    display: block;
+  }
+  .pop {
+    height: max-content;
+    background: #ffffff;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 435px;
+    &.show {
+      display: block;
+    }
+    &.small, &.big {
+      .icon-close-else {
+        right: 17px;
+        top: 17px;
+      }
+      .title {
+        font-size: 18px;
+        margin: 0;
+        color: #ffffff;
+        padding-left: 30px;
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+    &.small {
+      width: 345px;
+      .title {
+        background: #ffa800;
+      }
+      .controls {
+        button {
+          width: 198px;
+        }
+      }
+    }
+    &.big {
+      width: 850px;
+      .title {
+        background: #0075d1;
+      }
+      .controls {
+        button {
+          width: 130px;
+        }
+      }
+    }
+    //统一设置弹窗4层结构
+    .icon-close, .icon-close-else {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .title {
+      font-size: 22px;
+      color: #0075d1;
+      text-align: center;
+      margin: 40px 0 30px;
+    }
+    .content {
+      margin-bottom: 30px;
+      > .icon {
+        display: block;
+        margin: 35px auto 25px;
+      }
+      > p {
+        font-size: 18px;
+        color: #494949;
+        text-align: center;
+      }
+      .form-item {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &.error {
+          .form-right {
+            input {
+              border-color: red;
+            }
+            &.else {
+              border-color: red;
+            }
+          }
+        }
+        &.must {
+          .form-right {
+            &:after {
+              content: '*';
+              position: absolute;
+              color: #ff5e5e;
+              line-height: 46px;
+              top: 0;
+              right: -12px;
+            }
+          }
+        }
+        .form-left {
+          width: 90px;
+          display: block;
+          height: 46px;
+          line-height: 46px;
+        }
+        .form-right {
+          width: 310px;
+          height: 46px;
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          ::-webkit-input-placeholder {
+            color: #b4b4b4;
+          }
+          :-moz-placeholder {
+            color: #b4b4b4;
+          }
+          ::-moz-placeholder {
+            color: #b4b4b4;
+          }
+          :-ms-input-placeholder {
+            color: #b4b4b4;
+          }
+          input {
+            border: 1px solid #aeaeae;
+            color: #0075d1;
+            padding: 0 15px;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+            &:focus {
+              border-color: #0075d1;
+            }
+          }
+          button {
+            color: #0075d1;
+            border: 1px solid #0075d1;
+            background: #ffffff;
+            font-size: 16px;
+            height: 100%;
+            width: 130px;
+            &:hover {
+              color: #ffffff;
+              background: #0075d1;
+            }
+          }
+          &.else {
+            border: 1px solid #4c53a5;
+          }
+          &.code {
+            input {
+              width: calc(100% - 140px);
+            }
+          }
+        }
+      }
+    }
+    .controls {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      button {
+        width: 310px;
+        height: 44px;
+        font-size: 18px;
+        margin-right: 50px;
+        border: 1px solid #0075d1;
+        background: #0075d1;
+        color: #ffffff;
+        &:hover {
+          background: #005ea7;
+          border-color: #005ea7;
+        }
+        &.yellow {
+          background: #ffa800;
+          border-color: #ffa800;
+          &:hover {
+            background: #ff8400;
+            border-color: #ff8400;
+          }
+        }
+        &.else {
+          color: #0075d1;
+          border-color: #0075d1;
+          background: #ffffff;
+          &:hover {
+            color: #ffffff;
+            background: #0075d1;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .add {
+      border-top: 1px solid #dcdcdc;
+      width: 308px;
+      margin: 0 auto 50px;
+      padding-top: 24px;
+      text-align: center;
+      a {
+        cursor: pointer;
+        color: #747474;
+      }
+    }
+  }
+}
+
+@import "icon";
+@import "pop";

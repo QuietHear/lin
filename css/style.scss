@@ -1,0 +1,134 @@
+@charset "utf-8";
+@import "main";
+
+//主体内容
+section {
+  //首页
+  &.home {
+    .header {
+      background: url("../img/home_header.png") 100% 100%;
+      font-size: 44px;
+      width: 1880px;
+      margin: 0 auto 50px;
+      height: 106px;
+      line-height: 106px;
+      color: #00fff6;
+      text-align: center;
+    }
+    .section {
+      display: flex;
+      width: 1819px;
+      height: 727px;
+      margin: 0 auto;
+      justify-content: space-between;
+      .left, .right {
+        > div {
+          position: relative;
+          > .bg {
+            position: absolute;
+            left: -22px;
+            top: -26px;
+          }
+          > .tit {
+            color: #00fff6;
+            font-size: 21px;
+            position: absolute;
+            width: 100%;
+            top: -10.5px;
+            text-align: center;
+          }
+        }
+      }
+      .left {
+        width: 356px;
+        .xpst {
+          height: 167px;
+          padding-top: 40px;
+          p {
+            font-size: 19px;
+            padding-left: 40px;
+            i{
+              margin-right: 10px;
+            }
+            em {
+              font-size: 24px;
+              color: #ff6666;
+            }
+            &.enterprise{
+              margin: 5px 0;
+              em{
+                color: #ff9933;
+              }
+            }
+            &.student{
+              em{
+                color: #0fbf2a;
+              }
+            }
+          }
+        }
+        .yxgk {
+          height: 233px;
+          margin: 47px 0;
+        }
+        .cptx {
+          height: 233px;
+        }
+      }
+      .center {
+        width: 997px;
+        position: relative;
+        > .bg {
+          position: absolute;
+          left: -28px;
+          top: -29px;
+        }
+      }
+      .right {
+        width: 416px;
+        .kctx {
+          height: 395px;
+        }
+        .yxcg {
+          height: 290px;
+          margin-top: 42px;
+        }
+      }
+    }
+    .footer {
+      background: url("../img/home_tab.png") 100% 100% no-repeat;
+      width: 1788px;
+      height: 61px;
+      margin: 80px auto 0;
+      ul {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        li {
+          width: 145px;
+          background: url("../img/home_tab_item.png") 100% 100% no-repeat;
+          position: relative;
+          a {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            font-size: 19px;
+          }
+          &.active {
+            width: 256px;
+            background: url("../img/home_tab_active.png") 100% 100% no-repeat;
+            a {
+              height: 52px;
+              line-height: 52px;
+              font-size: 26px;
+              color: #00fff6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

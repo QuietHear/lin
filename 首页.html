@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>院校服务体系</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="home">
+    <div class="header">
+        西普教育院校服务体系
+    </div>
+    <div class="section">
+        <div class="left">
+            <div class="xpst">
+                <img class="bg" src="img/xpst.png">
+                <div class="tit">西普生态</div>
+                <p class="school"><i class="icon icon-school"></i>服务院校&nbsp;<em></em>&nbsp;所</p>
+                <p class="enterprise"><i class="icon icon-enterprise"></i>合作企业&nbsp;<em></em>&nbsp;家</p>
+                <p class="student"><i class="icon icon-student"></i>培养学生&nbsp;<em></em>&nbsp;人</p>
+            </div>
+            <div class="yxgk">
+                <img class="bg" src="img/yxgk.png">
+                <div class="tit">院校概况</div>
+                1
+            </div>
+            <div class="cptx">
+                <img class="bg" src="img/cptx.png">
+                <div class="tit">产品体系</div>
+                1
+            </div>
+        </div>
+        <div class="center">
+            <img class="bg" src="img/dt.png">
+            1
+        </div>
+        <div class="right">
+            <div class="kctx">
+                <img class="bg" src="img/kctx.png">
+                <div class="tit">课程体系</div>
+                1
+            </div>
+            <div class="yxcg">
+                <img class="bg" src="img/yxcg.png">
+                <div class="tit">院校成功</div>
+                1
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="">学生中心</a></li>
+            <li class="active"><a href="">院校服务体系</a></li>
+            <li><a href="">数据中心</a></li>
+        </ul>
+    </div>
+</section>
+<script src="js/jquery1.9.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        // $.ajax({
+        //     type: 'GET',
+        //     url: 'data/home.json',
+        //     dataType: 'json',
+        //     success: function (data) {
+        //         console.log(data)
+        //     }
+        // })
+        $.getJSON("data/home.txt",function (data) {
+            console.log(data)
+        })
+    });
+</script>
+</body>
+</html>

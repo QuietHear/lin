@@ -1,0 +1,82 @@
+@charset "utf-8";
+.pop-bg {
+  //公共消息弹窗
+  .msg-pop {
+    z-index: 1;
+    box-shadow: 0 0 24px rgba(146,146,146,.75);
+    background: #fff8ea;
+    .content {
+      margin: 60px 0 55px;
+    }
+  }
+  //成功弹窗
+  .success-pop {
+    z-index: 1;
+    box-shadow: 0 0 24px rgba(146,146,146,.75);
+    background: #ecf7ff;
+    .content {
+      margin-bottom: 35px;
+    }
+  }
+  //失败弹窗
+  .fail-pop {
+    z-index: 1;
+    box-shadow: 0 0 24px rgba(146,146,146,.75);
+    background: #ecf7ff;
+    .content {
+      margin-bottom: 35px;
+    }
+  }
+  //修改手机号第一步
+  .changPhoneFirst-pop {
+    .content {
+      .form-item {
+        .phone {
+          justify-content: normal;
+        }
+      }
+    }
+  }
+  //修改手机号第二步
+  .changPhoneLast-pop {
+
+  }
+  //登陆弹窗
+  .login-pop {
+    .title {
+      font-size: 14px;
+      margin-top: 65px;
+      .between {
+        margin: 15px 0 6px;
+      }
+    }
+    .content {
+      margin-bottom: 0;
+    }
+    > a {
+      color: #747474;
+      display: inline-block;
+      margin: 10px 0 20px 62px;
+      cursor: pointer;
+    }
+    .add {
+      margin-bottom: 66px;
+    }
+  }
+  //注册弹窗
+  .register-pop {
+
+  }
+  //找回密码
+  .resetPassword-pop {
+
+  }
+  //修改密码
+  .changePassword-pop {
+
+  }
+  //报名弹窗
+  .join-pop{
+
+  }
+}

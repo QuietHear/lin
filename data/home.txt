@@ -1,0 +1,7 @@
+{
+  "xpst":{
+    "school":800,
+    "enterprise":200,
+    "student":50000
+  }
+}
