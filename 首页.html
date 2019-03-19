@@ -64,12 +64,9 @@
             url: 'data/home.json',
             dataType: 'json',
             success: function (data) {
-                console.log(data)
+                console.log(JSON.parse(data))
             }
         });
-        // $.getJSON("data/home.txt",function (data) {
-        //     console.log(data)
-        // })
     });
 </script>
 </body>
