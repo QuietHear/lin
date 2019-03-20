@@ -1,10 +1,6 @@
 html, body {
   height: 100%; }
 
-html {
-  height: 1080px;
-  width: 1920px; }
-
 body {
   font: normal normal 14px "Times New Roman", "Microsoft YaHei";
   color: #fff;
@@ -280,7 +276,8 @@ section.home .section {
     section.home .section .left > div > .bg, section.home .section .right > div > .bg {
       position: absolute;
       left: -22px;
-      top: -26px; }
+      top: -26px;
+      z-index: -1; }
     section.home .section .left > div > .tit, section.home .section .right > div > .tit {
       color: #00fff6;
       font-size: 21px;
@@ -292,7 +289,8 @@ section.home .section {
     width: 356px; }
     section.home .section .left .xpst {
       height: 167px;
-      padding-top: 40px; }
+      padding-top: 40px;
+      cursor: pointer; }
       section.home .section .left .xpst p {
         font-size: 19px;
         padding-left: 40px; }
@@ -311,7 +309,26 @@ section.home .section {
       height: 233px;
       margin: 47px 0; }
     section.home .section .left .cptx {
-      height: 233px; }
+      height: 233px;
+      padding-top: 26px; }
+      section.home .section .left .cptx .detail {
+        margin: 0 auto;
+        display: block; }
+      section.home .section .left .cptx p {
+        font-size: 14px;
+        position: absolute;
+        width: 69px;
+        text-align: center;
+        line-height: 1.5; }
+      section.home .section .left .cptx .dsj {
+        left: 47px;
+        top: 54px; }
+      section.home .section .left .cptx .wlaq {
+        left: 145px;
+        top: 116px; }
+      section.home .section .left .cptx .rgzn {
+        right: 47px;
+        top: 54px; }
   section.home .section .center {
     width: 997px;
     position: relative; }
@@ -322,10 +339,84 @@ section.home .section {
   section.home .section .right {
     width: 416px; }
     section.home .section .right .kctx {
-      height: 395px; }
+      height: 395px;
+      background: url("../img/kctx_bg.png") no-repeat 36px 47px; }
+      section.home .section .right .kctx .gear {
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute; }
+        section.home .section .right .kctx .gear img {
+          vertical-align: top;
+          animation: to-right linear 4s infinite; }
+        section.home .section .right .kctx .gear p {
+          position: absolute;
+          font-size: 25px;
+          color: #1889fc;
+          width: 55px;
+          line-height: 1.2; }
+        section.home .section .right .kctx .gear.rgzn {
+          top: 140px;
+          left: 77px; }
+          section.home .section .right .kctx .gear.rgzn:hover, section.home .section .right .kctx .gear.rgzn.active {
+            background: radial-gradient(circle at center, #006ddc, rgba(0, 109, 220, 0), rgba(0, 0, 0, 0)); }
+          section.home .section .right .kctx .gear.rgzn p {
+            top: 22px;
+            left: 25px; }
+          section.home .section .right .kctx .gear.rgzn img {
+            animation-name: to-left; }
+        section.home .section .right .kctx .gear.wlaq {
+          top: 67px;
+          left: 174px; }
+          section.home .section .right .kctx .gear.wlaq:hover, section.home .section .right .kctx .gear.wlaq.active {
+            background: radial-gradient(circle at center, #1c9ab8, rgba(28, 154, 184, 0), rgba(0, 0, 0, 0)); }
+          section.home .section .right .kctx .gear.wlaq p {
+            color: #33dbff;
+            left: 35px;
+            top: 29.5px; }
+        section.home .section .right .kctx .gear.dsj {
+          bottom: 41px;
+          right: 90px; }
+          section.home .section .right .kctx .gear.dsj:hover, section.home .section .right .kctx .gear.dsj.active {
+            background: radial-gradient(circle at center, #009476, rgba(0, 148, 118, 0), rgba(0, 0, 0, 0)); }
+          section.home .section .right .kctx .gear.dsj p {
+            font-size: 33px;
+            color: #00e1b3;
+            width: auto;
+            left: 30.5px;
+            top: 62px; }
     section.home .section .right .yxcg {
       height: 290px;
-      margin-top: 42px; }
+      margin-top: 42px;
+      padding: 20px 0;
+      cursor: pointer; }
+      section.home .section .right .yxcg .content {
+        padding: 0 20px;
+        height: 100%;
+        position: relative;
+        overflow: hidden; }
+        section.home .section .right .yxcg .content .group {
+          position: absolute; }
+          section.home .section .right .yxcg .content .group .row {
+            display: flex;
+            margin-bottom: 12px; }
+            section.home .section .right .yxcg .content .group .row:last-child {
+              margin-bottom: 0; }
+            section.home .section .right .yxcg .content .group .row .item {
+              width: 101px;
+              margin-right: 36.5px; }
+              section.home .section .right .yxcg .content .group .row .item:last-child {
+                margin-right: 0; }
+              section.home .section .right .yxcg .content .group .row .item .logo {
+                height: 101px;
+                background: url("../img/yxcg_logo_bg.png") 100% 100% no-repeat; }
+                section.home .section .right .yxcg .content .group .row .item .logo img {
+                  width: 66%;
+                  height: 66%;
+                  margin: 17%; }
+              section.home .section .right .yxcg .content .group .row .item p {
+                font-size: 12px;
+                text-align: center;
+                line-height: 1.5; }
 section.home .footer {
   background: url("../img/home_tab.png") 100% 100% no-repeat;
   width: 1788px;
@@ -346,7 +437,8 @@ section.home .footer {
         width: 100%;
         height: 44px;
         line-height: 44px;
-        font-size: 19px; }
+        font-size: 19px;
+        border-radius: 35px 35px 0 0; }
       section.home .footer ul li.active {
         width: 256px;
         background: url("../img/home_tab_active.png") 100% 100% no-repeat; }
@@ -354,6 +446,63 @@ section.home .footer {
           height: 52px;
           line-height: 52px;
           font-size: 26px;
-          color: #00fff6; }
+          color: #00fff6;
+          border-radius: 52px 52px 0 0; }
+section.home .top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none; }
+  section.home .top.rgzn {
+    display: block; }
+    section.home .top.rgzn .close-img {
+      right: 442px;
+      top: 241px; }
+    section.home .top.rgzn .rgzn-img {
+      display: block;
+      right: 357px;
+      top: 194px; }
+  section.home .top.wlaq {
+    display: block; }
+    section.home .top.wlaq .close-img {
+      right: 437px;
+      top: 252px; }
+    section.home .top.wlaq .wlaq-img {
+      display: block;
+      right: 253px;
+      top: 205px; }
+  section.home .top.dsj {
+    display: block; }
+    section.home .top.dsj .close-img {
+      right: 440px;
+      top: 241px; }
+    section.home .top.dsj .dsj-img {
+      display: block;
+      right: 265px;
+      top: 194px; }
+  section.home .top img {
+    display: none;
+    position: absolute; }
+  section.home .top .close-img {
+    display: block;
+    cursor: pointer;
+    border-radius: 50%; }
+
+@keyframes to-right {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes to-left {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(-180deg); }
+  100% {
+    transform: rotate(-360deg); } }
 
 /*# sourceMappingURL=style.css.map */

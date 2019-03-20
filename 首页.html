@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>院校服务体系</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 <section class="home">
@@ -15,9 +20,9 @@
             <div class="xpst">
                 <img class="bg" src="img/xpst.png">
                 <div class="tit">西普生态</div>
-                <p class="school"><i class="icon icon-school"></i>服务院校&nbsp;<em></em>&nbsp;所</p>
-                <p class="enterprise"><i class="icon icon-enterprise"></i>合作企业&nbsp;<em></em>&nbsp;家</p>
-                <p class="student"><i class="icon icon-student"></i>培养学生&nbsp;<em></em>&nbsp;人</p>
+                <p class="school"><i class="icon icon-school"></i>服务院校&nbsp;<em>0</em>&nbsp;所</p>
+                <p class="enterprise"><i class="icon icon-enterprise"></i>合作企业&nbsp;<em>0</em>&nbsp;家</p>
+                <p class="student"><i class="icon icon-student"></i>培养学生&nbsp;<em>0</em>&nbsp;人</p>
             </div>
             <div class="yxgk">
                 <img class="bg" src="img/yxgk.png">
@@ -27,7 +32,22 @@
             <div class="cptx">
                 <img class="bg" src="img/cptx.png">
                 <div class="tit">产品体系</div>
-                1
+                <img class="detail" src="img/cptx_detail.png">
+                <p class="dsj">
+                    <span>实验教学</span>
+                    <span>科研实训</span>
+                    <span>以赛促学</span>
+                </p>
+                <p class="wlaq">
+                    <span>网络教学</span>
+                    <span>专长培训</span>
+                    <span>靶场经济</span>
+                </p>
+                <p class="rgzn">
+                    <span>实验教学</span>
+                    <span>科研&实训</span>
+                    <span>无人驾驶</span>
+                </p>
             </div>
         </div>
         <div class="center">
@@ -38,12 +58,66 @@
             <div class="kctx">
                 <img class="bg" src="img/kctx.png">
                 <div class="tit">课程体系</div>
-                1
+                <div class="gear rgzn">
+                    <img class="bg" src="img/kctx_rgzn.png">
+                    <p>人工智能</p>
+                </div>
+                <div class="gear wlaq">
+                    <img class="bg" src="img/kctx_wlaq.png">
+                    <p>网络安全</p>
+                </div>
+                <div class="gear dsj">
+                    <img class="bg" src="img/kctx_dsj.png">
+                    <p>大数据</p>
+                </div>
             </div>
             <div class="yxcg">
                 <img class="bg" src="img/yxcg.png">
                 <div class="tit">院校成功</div>
-                1
+                <div class="content">
+                    <div class="group">
+                        <div class="row">
+                            <div class="item">
+                                <div class="logo">
+                                    <img src="img/college-logo/anh01.png">
+                                </div>
+                                <p>1</p>
+                            </div>
+                            <div class="item">
+                                <div class="logo">
+                                    <img src="img/college-logo/anh02.png">
+                                </div>
+                                <p>2</p>
+                            </div>
+                            <div class="item">
+                                <div class="logo">
+                                    <img src="img/college-logo/anh03.png">
+                                </div>
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="item">
+                                <div class="logo">
+                                    <img src="img/college-logo/anh04.png">
+                                </div>
+                                <p>4</p>
+                            </div>
+                            <div class="item">
+                                <div class="logo">
+                                    <img src="img/college-logo/anh05.png">
+                                </div>
+                                <p>5</p>
+                            </div>
+                            <div class="item">
+                                <div class="logo">
+                                    <img src="img/college-logo/anh06.png">
+                                </div>
+                                <p>6</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -54,19 +128,72 @@
             <li><a href="">数据中心</a></li>
         </ul>
     </div>
+    <div class="top">
+        <img class="rgzn-img" src="img/rgzn_pop.png">
+        <img class="wlaq-img" src="img/wlaq_pop.png">
+        <img class="dsj-img" src="img/dsj_pop.png">
+        <img class="close-img" src="img/close_pop.png">
+    </div>
 </section>
 <script src="js/jquery1.9.min.js"></script>
 <script src="js/main.js"></script>
 <script>
     $(document).ready(function () {
-        $.ajax({
-            type: 'GET',
-            url: 'data/home.json',
-            dataType: 'json',
-            success: function (data) {
-                console.log(JSON.parse(data))
+        // $.ajax({
+        //     type: 'GET',
+        //     url: 'data/home.json',
+        //     dataType: 'json',
+        //     success: function (data) {
+        //         console.log(JSON.parse(data))
+        //     }
+        // });
+        // 数量大于3时
+        let $parent = $('.section .yxcg .content');
+        let str = $parent.html();
+        $parent.html(str + str);
+        let height = $parent.children('.group:first-child').css('top', 0).height();
+        let vy = 50;
+        $parent.children('.group:last-child').css('top', height + 12);
+        let count = 0;
+        let scroll = function () {
+            if (count % 2 === 0) {
+                $parent.children('.group:first-child').animate({
+                    top: -height - 12
+                }, height / vy * 1000, function () {
+                    $(this).css('top', height + 12);
+                });
+                $parent.children('.group:last-child').animate({
+                    top: 0
+                }, height / vy * 1000);
             }
-        });
+            else {
+                $parent.children('.group:last-child').animate({
+                    top: -height - 12
+                }, height / vy * 1000, function () {
+                    $(this).css('top', height + 12);
+                });
+                $parent.children('.group:first-child').animate({
+                    top: 0
+                }, height / vy * 1000);
+            }
+            count = (count + 1) > 1 ? 0 : (count + 1);
+        };
+        setInterval(scroll, height / vy * 1000);
+        scroll();
+    });
+    $('.section .xpst').on('click', function () {
+        window.open('西普生态.html');
+    });
+    $('.section .yxcg').on('click', function () {
+        window.open('院校成功.html');
+    });
+    $('.section .kctx .gear').on('click', function () {
+        $('.top').addClass($(this).attr('class').replace('gear', '').trim());
+        $(this).addClass('active');
+    });
+    $('.top .close-img').on('click', function () {
+        $(this).closest('div').attr('class','top');
+        $('.section .kctx .gear.active').removeClass('active');
     });
 </script>
 </body>

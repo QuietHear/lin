@@ -3,7 +3,6 @@
 
 //主体内容
 section {
-  //首页
   &.home {
     .header {
       background: url("../img/home_header.png") 100% 100%;
@@ -28,6 +27,7 @@ section {
             position: absolute;
             left: -22px;
             top: -26px;
+            z-index: -1;
           }
           > .tit {
             color: #00fff6;
@@ -44,24 +44,25 @@ section {
         .xpst {
           height: 167px;
           padding-top: 40px;
+          cursor: pointer;
           p {
             font-size: 19px;
             padding-left: 40px;
-            i{
+            i {
               margin-right: 10px;
             }
             em {
               font-size: 24px;
               color: #ff6666;
             }
-            &.enterprise{
+            &.enterprise {
               margin: 5px 0;
-              em{
+              em {
                 color: #ff9933;
               }
             }
-            &.student{
-              em{
+            &.student {
+              em {
                 color: #0fbf2a;
               }
             }
@@ -73,6 +74,30 @@ section {
         }
         .cptx {
           height: 233px;
+          padding-top: 26px;
+          .detail {
+            margin: 0 auto;
+            display: block;
+          }
+          p {
+            font-size: 14px;
+            position: absolute;
+            width: 69px;
+            text-align: center;
+            line-height: 1.5;
+          }
+          .dsj {
+            left: 47px;
+            top: 54px;
+          }
+          .wlaq {
+            left: 145px;
+            top: 116px;
+          }
+          .rgzn {
+            right: 47px;
+            top: 54px;
+          }
         }
       }
       .center {
@@ -88,10 +113,106 @@ section {
         width: 416px;
         .kctx {
           height: 395px;
+          background: url("../img/kctx_bg.png") no-repeat 36px 47px;
+          .gear {
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            img {
+              vertical-align: top;
+              animation: to-right linear 4s infinite;
+            }
+            p {
+              position: absolute;
+              font-size: 25px;
+              color: #1889fc;
+              width: 55px;
+              line-height: 1.2;
+            }
+            &.rgzn {
+              top: 140px;
+              left: 77px;
+              &:hover, &.active {
+                background: radial-gradient(circle at center, rgba(0, 109, 220, 1), rgba(0, 109, 220, 0), rgba(0, 0, 0, 0));
+              }
+              p {
+                top: 22px;
+                left: 25px;
+              }
+              img {
+                animation-name: to-left;
+              }
+            }
+            &.wlaq {
+              top: 67px;
+              left: 174px;
+              &:hover, &.active {
+                background: radial-gradient(circle at center, rgba(28, 154, 184, 1), rgba(28, 154, 184, 0), rgba(0, 0, 0, 0));
+              }
+              p {
+                color: #33dbff;
+                left: 35px;
+                top: 29.5px;
+              }
+            }
+            &.dsj {
+              bottom: 41px;
+              right: 90px;
+              &:hover, &.active {
+                background: radial-gradient(circle at center, rgba(0, 148, 118, 1), rgba(0, 148, 118, 0), rgba(0, 0, 0, 0));
+              }
+              p {
+                font-size: 33px;
+                color: #00e1b3;
+                width: auto;
+                left: 30.5px;
+                top: 62px;
+              }
+            }
+          }
         }
         .yxcg {
           height: 290px;
           margin-top: 42px;
+          padding: 20px 0;
+          cursor: pointer;
+          .content {
+            padding: 0 20px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            .group {
+              position: absolute;
+              .row {
+                display: flex;
+                margin-bottom: 12px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                .item {
+                  width: 101px;
+                  margin-right: 36.5px;
+                  &:last-child {
+                    margin-right: 0;
+                  }
+                  .logo {
+                    height: 101px;
+                    background: url("../img/yxcg_logo_bg.png") 100% 100% no-repeat;
+                    img {
+                      width: 66%;
+                      height: 66%;
+                      margin: 17%;
+                    }
+                  }
+                  p {
+                    font-size: 12px;
+                    text-align: center;
+                    line-height: 1.5;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -116,6 +237,7 @@ section {
             height: 44px;
             line-height: 44px;
             font-size: 19px;
+            border-radius: 35px 35px 0 0;
           }
           &.active {
             width: 256px;
@@ -125,10 +247,95 @@ section {
               line-height: 52px;
               font-size: 26px;
               color: #00fff6;
+              border-radius: 52px 52px 0 0;
             }
           }
         }
       }
     }
+    .top {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: none;
+      &.rgzn {
+        display: block;
+        .close-img {
+          right: 442px;
+          top: 241px;
+        }
+        .rgzn-img {
+          display: block;
+          right: 357px;
+          top: 194px;
+        }
+      }
+      &.wlaq {
+        display: block;
+        .close-img {
+          right: 437px;
+          top: 252px;
+        }
+        .wlaq-img {
+          display: block;
+          right: 253px;
+          top: 205px;
+        }
+      }
+      &.dsj {
+        display: block;
+        .close-img {
+          right: 440px;
+          top: 241px;
+        }
+        .dsj-img {
+          display: block;
+          right: 265px;
+          top: 194px;
+        }
+      }
+      img {
+        display: none;
+        position: absolute;
+      }
+      .close-img {
+        display: block;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    }
+  }
+  &.xipushengtai {
+
+  }
+  &.yuanxiaochenggong {
+
+  }
+}
+
+// 动画
+@keyframes to-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes to-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
