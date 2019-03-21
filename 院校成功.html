@@ -13,18 +13,18 @@
         院校成功
     </div>
     <div class="section">
-        <div class="bigCarousel">
-            <div class="controls prv-btn">
-                <img class="normal" src="img/yuanxiaochenggong/btn_l.png">
-                <img class="active" src="img/yuanxiaochenggong/btn_l_hover.png">
-            </div>
-            <ul class="list"></ul>
-            <div class="controls next-btn">
-                <img class="normal" src="img/yuanxiaochenggong/btn_r.png">
-                <img class="active" src="img/yuanxiaochenggong/btn_r_hover.png">
-            </div>
-            <ul class="indicator"></ul>
-        </div>
+        <!--<div class="bigCarousel">-->
+            <!--<div class="controls prv-btn">-->
+                <!--<img class="normal" src="img/yuanxiaochenggong/btn_l.png">-->
+                <!--<img class="active" src="img/yuanxiaochenggong/btn_l_hover.png">-->
+            <!--</div>-->
+            <!--<ul class="list"></ul>-->
+            <!--<div class="controls next-btn">-->
+                <!--<img class="normal" src="img/yuanxiaochenggong/btn_r.png">-->
+                <!--<img class="active" src="img/yuanxiaochenggong/btn_r_hover.png">-->
+            <!--</div>-->
+            <!--<ul class="indicator"></ul>-->
+        <!--</div>-->
     </div>
     <div class="footer">
         <button data-name="dsj">大数据</button>
@@ -47,7 +47,18 @@
             $(this).removeClass('active');
         });
         $('.footer button[data-name=' + name + ']').addClass('active');
-        
+        $('.section').html(`<div class="bigCarousel">
+            <div class="controls prv-btn">
+                <img class="normal" src="img/yuanxiaochenggong/btn_l.png">
+                <img class="active" src="img/yuanxiaochenggong/btn_l_hover.png">
+            </div>
+            <ul class="list"></ul>
+            <div class="controls next-btn">
+                <img class="normal" src="img/yuanxiaochenggong/btn_r.png">
+                <img class="active" src="img/yuanxiaochenggong/btn_r_hover.png">
+            </div>
+            <ul class="indicator"></ul>
+        </div>`);
         allData[name].forEach(function (item) {
             $('.bigCarousel .list').append(`<li class="item">
              <a>
@@ -75,6 +86,9 @@
                 console.log(allData);
                 changeData('dsj');
             }
+        });
+        $('.footer button').on('click', function () {
+            changeData($(this).attr('data-name'));
         });
     });
 </script>
