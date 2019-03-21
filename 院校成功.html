@@ -38,15 +38,25 @@
 <script src="js/main.js"></script>
 <script>
     var allData;
+
+    function changeData(name) {
+        if (allData[name].length < 5) {
+            allData[name] = [...allData[name], ...allData[name]];
+        }
+        console.log(allData[name])
+    }
+
     $(document).ready(function () {
         $.ajax({
             type: 'GET',
             url: 'data/yuanxiaochenggong.json',
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 allData = {...data};
                 console.log(allData);
+                changeData('dsj');
+                changeData('rgzn');
+                changeData('wlaq');
             }
         });
         bigCarousel.start();
