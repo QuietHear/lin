@@ -43,11 +43,12 @@
         if (allData[name].length < 5) {
             allData[name] = [...allData[name], ...allData[name]];
         }
+        $('.footer button').each(function () {
+            $(this).removeClass('active');
+        });
+        $('.footer button[data-name=' + name + ']').addClass('active');
+        
         allData[name].forEach(function (item) {
-            $('.footer button').each(function () {
-                $(this).removeClass('active');
-            });
-            $('.footer button[data-name=' + name + ']').addClass('active');
             $('.bigCarousel .list').append(`<li class="item">
              <a>
                <div class="content">
