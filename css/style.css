@@ -500,7 +500,8 @@ section.yuanxiaochenggong .header {
   text-align: center; }
 section.yuanxiaochenggong .footer {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 100px; }
   section.yuanxiaochenggong .footer button {
     background: url("../img/yuanxiaochenggong/footer_btn.png") no-repeat;
     width: 216px;
