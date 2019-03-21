@@ -135,7 +135,8 @@ ul, ol {
       line-height: 1.5;
       max-height: 212px;
       overflow-y: auto;
-      margin-top: 10px; }
+      margin-top: 10px;
+      text-align: justify; }
     .pop-bg .hzxm-pop .content .item .strong {
       color: #ffde03 !important; }
 .pop-bg .rzpx-pop .content {
@@ -149,7 +150,7 @@ ul, ol {
     height: 298px;
     margin-right: 30px;
     margin-bottom: 20px;
-    padding: 10px; }
+    padding: 10px 16px; }
     .pop-bg .rzpx-pop .content .item:nth-child(2n) {
       margin-right: 0; }
     .pop-bg .rzpx-pop .content .item:nth-last-child(1), .pop-bg .rzpx-pop .content .item:nth-last-child(2) {
@@ -173,7 +174,8 @@ ul, ol {
       line-height: 1.5;
       max-height: 145px;
       overflow-y: auto;
-      margin-top: 10px; }
+      margin-top: 10px;
+      text-align: justify; }
 .pop-bg .zqhz-pop .content {
   margin-top: 60px;
   display: flex;
