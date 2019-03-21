@@ -142,6 +142,7 @@
       .bigCarousel .list .item.bottom {
         z-index: 1; }
   .bigCarousel .indicator {
+    display: none;
     position: relative;
     list-style-type: none;
     padding-left: 0;
