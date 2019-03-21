@@ -43,7 +43,25 @@
         if (allData[name].length < 5) {
             allData[name] = [...allData[name], ...allData[name]];
         }
-        console.log(allData[name])
+        allData[name].forEach(function (item) {
+            $('.footer button').each(function () {
+                $(this).removeClass('active');
+            });
+            $('.footer button[data-name=' + name + ']').addClass('active');
+            $('.bigCarousel .list').append(`<li class="item">
+             <a>
+               <div class="content">
+                <img class="logo" src="img/yuanxiaochenggong/${name}/${item.logo}">
+                <p class="title">${item.title}</p>
+                <div class="msg">
+                  <div class="left">${item.content}</div>
+                  ${item.img === undefined || item.img === '' ? '' : `<img src="img/yuanxiaochenggong/${name}/${item.img}">`}
+                </div>
+               </div>
+             </a>
+           </li>`);
+        });
+        bigCarousel.start();
     }
 
     $(document).ready(function () {
@@ -55,23 +73,8 @@
                 allData = {...data};
                 console.log(allData);
                 changeData('dsj');
-                changeData('rgzn');
-                changeData('wlaq');
             }
         });
-        bigCarousel.start();
-        // <li class="item">
-        //         <a class="active">
-        //         <div class="content">
-        //         <img class="logo" src="img/yuanxiaochenggong/dsj/logo1.png">
-        //         <p class="title">111</p>
-        //         <div class="msg">
-        //         <div class="left">11111111111</div>
-        //         <img src="img/yuanxiaochenggong/dsj/img1.jpg">
-        //         </div>
-        //         </div>
-        //         </a>
-        //         </li>
     });
 </script>
 </body>
