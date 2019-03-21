@@ -5,7 +5,7 @@
 section {
   &.home {
     .header {
-      background: url("../img/home_header.png") 100% 100%;
+      background: url("../img/home/home_header.png") 100% 100%;
       font-size: 44px;
       width: 1880px;
       margin: 0 auto 50px;
@@ -113,7 +113,7 @@ section {
         width: 416px;
         .kctx {
           height: 395px;
-          background: url("../img/kctx_bg.png") no-repeat 36px 47px;
+          background: url("../img/home/kctx_bg.png") no-repeat 36px 47px;
           .gear {
             border-radius: 50%;
             cursor: pointer;
@@ -197,7 +197,7 @@ section {
                   }
                   .logo {
                     height: 101px;
-                    background: url("../img/yxcg_logo_bg.png") 100% 100% no-repeat;
+                    background: url("../img/home/yxcg_logo_bg.png") 100% 100% no-repeat;
                     img {
                       width: 66%;
                       height: 66%;
@@ -217,7 +217,7 @@ section {
       }
     }
     .footer {
-      background: url("../img/home_tab.png") 100% 100% no-repeat;
+      background: url("../img/home/home_tab.png") 100% 100% no-repeat;
       width: 1788px;
       height: 61px;
       margin: 80px auto 0;
@@ -227,7 +227,7 @@ section {
         justify-content: center;
         li {
           width: 145px;
-          background: url("../img/home_tab_item.png") 100% 100% no-repeat;
+          background: url("../img/home/home_tab_item.png") 100% 100% no-repeat;
           position: relative;
           a {
             position: absolute;
@@ -241,7 +241,7 @@ section {
           }
           &.active {
             width: 256px;
-            background: url("../img/home_tab_active.png") 100% 100% no-repeat;
+            background: url("../img/home/home_tab_active.png") 100% 100% no-repeat;
             a {
               height: 52px;
               line-height: 52px;
@@ -307,8 +307,68 @@ section {
       }
     }
   }
+  &.xipushengtai, &.yuanxiaochenggong {
+    button.back {
+      position: absolute;
+      top: 34px;
+      right: 30px;
+      width: 95px;
+      height: 42px;
+      font-size: 18px;
+      color: #00fff6;
+      border: 1px solid #00fff6;
+      box-shadow: 0 0 3px 3px rgba(0, 255, 246, .69), 0 0 18px 14px rgba(0, 255, 246, .47) inset;
+      &:hover {
+        box-shadow: 0 0 3px 3px rgba(0, 255, 246, .69), 0 0 18px 14px rgba(0, 255, 246, .6) inset;
+      }
+    }
+  }
   &.xipushengtai {
-
+    .header {
+      background: url("../img/xipushengtai/header.png") 100% 100% no-repeat;
+      font-size: 44px;
+      width: 510px;
+      margin: 0 auto 80px;
+      height: 67px;
+      line-height: 67px;
+      color: #00fff6;
+      text-align: center;
+    }
+    .section {
+      position: relative;
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+      .hide {
+        position: absolute;
+        cursor: pointer;
+      }
+      .top {
+        width: 56px;
+        height: 111px;
+        top: 0;
+        left: 937px;
+      }
+      .bottom {
+        width: 56px;
+        height: 111px;
+        bottom: 0;
+        left: 937px;
+      }
+      .left {
+        width: 137px;
+        height: 53px;
+        top: 379px;
+        left: 217px;
+      }
+      .right {
+        width: 129px;
+        height: 55px;
+        top: 376px;
+        right: 221px;
+      }
+    }
   }
   &.yuanxiaochenggong {
 
