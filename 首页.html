@@ -63,48 +63,7 @@
                 <img class="bg" src="img/home/yxcg.png">
                 <div class="tit">院校成功</div>
                 <div class="content">
-                    <div class="group">
-                        <div class="row">
-                            <div class="item">
-                                <div class="logo">
-                                    <img src="img/college-logo/anh01.png">
-                                </div>
-                                <p>1</p>
-                            </div>
-                            <div class="item">
-                                <div class="logo">
-                                    <img src="img/college-logo/anh02.png">
-                                </div>
-                                <p>2</p>
-                            </div>
-                            <div class="item">
-                                <div class="logo">
-                                    <img src="img/college-logo/anh03.png">
-                                </div>
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="item">
-                                <div class="logo">
-                                    <img src="img/college-logo/anh04.png">
-                                </div>
-                                <p>4</p>
-                            </div>
-                            <div class="item">
-                                <div class="logo">
-                                    <img src="img/college-logo/anh05.png">
-                                </div>
-                                <p>5</p>
-                            </div>
-                            <div class="item">
-                                <div class="logo">
-                                    <img src="img/college-logo/anh06.png">
-                                </div>
-                                <p>6</p>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="group"></div>
                 </div>
             </div>
         </div>
@@ -132,9 +91,27 @@
             dataType: 'json',
             success: function (data) {
                 console.log(data)
-                console.log(JSON.stringify(data))
-                console.log(JSON.parse(data))
-
+                $('.section .xpst .school em').text(data.xpst.school);
+                $('.section .xpst .enterprise em').text(data.xpst.enterprise);
+                $('.section .xpst .student em').text(data.xpst.student);
+                data.cptx.dsj.forEach(function (item) {
+                    $('.section .cptx .dsj').append(`<span>${item}</span>`);
+                });
+                data.cptx.rgzn.forEach(function (item) {
+                    $('.section .cptx .rgzn').append(`<span>${item}</span>`);
+                });
+                data.cptx.wlaq.forEach(function (item) {
+                    $('.section .cptx .wlaq').append(`<span>${item}</span>`);
+                });
+                
+                // <div class="row">
+                //         <div class="item">
+                //         <div class="logo">
+                //         <img src="img/college-logo/anh01.png">
+                //         </div>
+                //         <p>1</p>
+                //         </div>
+                //         </div>
             }
         });
         // 数量大于3时
