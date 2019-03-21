@@ -49,6 +49,14 @@
         $('.footer button[data-name=' + name + ']').addClass('active');
         $('.bigCarousel .list').html('');
         $('.bigCarousel .indicator').html('');
+        $('.bigCarousel').unbind();
+        $('.bigCarousel .prv-btn').unbind();
+        $('.bigCarousel .next-btn').unbind();
+        $('.bigCarousel .indicator').unbind();
+        clearInterval(bigCarousel.INIT);
+        bigCarousel.beforePlace = null;
+        bigCarousel.nowPlace = null;
+        bigCarousel.INIT = null;
         allData[name].forEach(function (item) {
             $('.bigCarousel .list').append(`<li class="item">
              <a>
