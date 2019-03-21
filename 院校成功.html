@@ -4,12 +4,78 @@
     <meta charset="UTF-8">
     <title>院校成功</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/3dCarousel.css"/>
 </head>
 <body>
 <section class="yuanxiaochenggong">
-
+    <button class="back">返回</button>
+    <div class="header">
+        院校成功
+    </div>
+    <div class="section">
+        <div class="bigCarousel">
+            <div class="controls prv-btn">
+                <img class="normal" src="img/yuanxiaochenggong/btn_l.png">
+                <img class="active" src="img/yuanxiaochenggong/btn_l_hover.png">
+            </div>
+            <!--轮播区域-->
+            <ul class="list">
+                <li class="item">
+                    <a class="active">
+                        <div class="content">
+                            <img class="logo" src="img/yuanxiaochenggong/dsj/logo1.png">
+                            <p class="title">111</p>
+                            <div class="msg">
+                                <div class="left">11111111111</div>
+                                <img src="img/yuanxiaochenggong/dsj/img1.jpg">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a>
+                        <div class="content">
+                            2
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a>
+                        <div class="content">
+                            3
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a>
+                        <div class="content">
+                            4
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="controls next-btn">
+                <img class="normal" src="img/yuanxiaochenggong/btn_r.png">
+                <img class="active" src="img/yuanxiaochenggong/btn_r_hover.png">
+            </div>
+            <!--提示区域-->
+            <ul class="indicator"></ul>
+        </div>
+    </div>
+    <div class="footer">
+        <button data-name="dsj">大数据</button>
+        <button data-name="rgzn">人工智能</button>
+        <button data-name="wlaq">网络安全</button>
+        <button data-name="yxfu">院校服务</button>
+    </div>
 </section>
 <script src="js/jquery1.9.min.js"></script>
+<script type="text/javascript" src="js/3dCarousel.js"></script>
 <script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        bigCarousel.start();
+    });
+</script>
 </body>
 </html>

@@ -489,6 +489,29 @@ section.xipushengtai .section {
     height: 55px;
     top: 376px;
     right: 221px; }
+section.yuanxiaochenggong .header {
+  background: url("../img/yuanxiaochenggong/header.png") 100% 100% no-repeat;
+  font-size: 44px;
+  width: 510px;
+  margin: 0 auto 80px;
+  height: 67px;
+  line-height: 67px;
+  color: #00fff6;
+  text-align: center; }
+section.yuanxiaochenggong .footer {
+  display: flex;
+  justify-content: center; }
+  section.yuanxiaochenggong .footer button {
+    background: url("../img/yuanxiaochenggong/footer_btn.png") no-repeat;
+    width: 216px;
+    height: 67px;
+    color: #00fff6;
+    font-size: 26px; }
+    section.yuanxiaochenggong .footer button:hover, section.yuanxiaochenggong .footer button.active {
+      background: url("../img/yuanxiaochenggong/footer_btn_active.png");
+      color: #ffde03; }
+    section.yuanxiaochenggong .footer button + button {
+      margin-left: 36px; }
 
 @keyframes to-right {
   0% {

@@ -87,7 +87,7 @@ section {
             width: 69px;
             text-align: center;
             line-height: 1.5;
-            span{
+            span {
               white-space: nowrap;
               overflow: hidden;
               display: inline-block;
@@ -380,7 +380,34 @@ section {
     }
   }
   &.yuanxiaochenggong {
-
+    .header {
+      background: url("../img/yuanxiaochenggong/header.png") 100% 100% no-repeat;
+      font-size: 44px;
+      width: 510px;
+      margin: 0 auto 80px;
+      height: 67px;
+      line-height: 67px;
+      color: #00fff6;
+      text-align: center;
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      button {
+        background: url("../img/yuanxiaochenggong/footer_btn.png") no-repeat;
+        width: 216px;
+        height: 67px;
+        color: #00fff6;
+        font-size: 26px;
+        &:hover, &.active {
+          background: url("../img/yuanxiaochenggong/footer_btn_active.png");
+          color: #ffde03;
+        }
+        & + button {
+          margin-left: 36px;
+        }
+      }
+    }
   }
 }
 

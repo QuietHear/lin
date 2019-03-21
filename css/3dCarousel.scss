@@ -1,0 +1,244 @@
+@charset "utf-8";
+//轮播插件
+.bigCarousel {
+  width: 1187px;
+  height: 626px;
+  margin: 0 auto;
+  position: relative;
+  //控制按钮
+  .controls {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 268px;
+    z-index: 10;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      display: none;
+      &.normal {
+        display: block;
+      }
+    }
+    &.prv-btn {
+      left: -25%;
+      &:hover {
+        img {
+          &.normal {
+            display: none;
+          }
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+    &.next-btn {
+      right: -25%;
+      &:hover {
+        img {
+          &.normal {
+            display: none;
+          }
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  //轮播区域
+  .list {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    //通用设置
+    .item {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: auto;
+      right: 0;
+      opacity: 0;
+      background: url("../img/yuanxiaochenggong/carousel_bg.png") no-repeat;
+      background-size: contain;
+      //左移动--部分
+      @keyframes moveLeft {
+        from {
+          right: 28%;
+        }
+        to {
+          right: 36%;
+        }
+      }
+
+      //离开左边--全部
+      @keyframes leaveLeft {
+        from {
+          right: 36%;
+        }
+        to {
+          right: 28%;
+        }
+      }
+
+      //右移动--部分
+      @keyframes moveRight {
+        from {
+          left: 28%;
+        }
+        to {
+          left: 36%;
+        }
+      }
+
+      //离开右边--全部
+      @keyframes leaveRight {
+        from {
+          left: 36%;
+        }
+        to {
+          left: 28%;
+        }
+      }
+
+      //上边左移
+      @keyframes topLeft {
+        from {
+          right: -4%;
+        }
+        to {
+          right: 0;
+        }
+      }
+
+      //上面右移
+      @keyframes topRight {
+        from {
+          left: -4%;
+        }
+        to {
+          left: 0;
+        }
+      }
+
+      //上面跳动
+      @keyframes topJump {
+        from {
+          transform: scale(0.8, 0.95);
+        }
+        to {
+          transform: scale(1, 1);
+        }
+      }
+      //列表项上的附加内容
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+        .content {
+          display: none;
+          height: 100%;
+          padding: 70px;
+          .logo {
+            width: 212px;
+            height: 45px;
+          }
+          .title {
+            font-size: 30px;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 15px;
+            margin: 25px 0 40px;
+          }
+          ::-webkit-scrollbar {
+            width: 8px;
+            height: 100%;
+          }
+          ::-webkit-scrollbar-track {
+            background-color: rgb(7, 41, 50);
+          }
+          ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: rgb(4, 255, 204);
+          }
+          .msg {
+            padding: 0 15px;
+            display: flex;
+            .left{
+              word-break: break-all;
+              max-height: 335px;
+              overflow-y: auto;
+              text-align: justify;
+              min-width: 505px;
+              text-indent: 2em;
+              line-height: 1.5;
+            }
+            img{
+              margin-left: 10px;
+              width: 502px;
+              height: 335px;
+            }
+          }
+        }
+      }
+      //移动
+      &.moveLeft { //左移
+        right: 36%;
+        left: auto;
+      }
+      &.moveRight { //右移
+        left: 36%;
+      }
+      //每一项位置决定其内容
+      &.top {
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        a {
+          .content {
+            display: block;
+          }
+        }
+      }
+      &.middle {
+        z-index: 5;
+        opacity: 0.5;
+      }
+      &.bottom {
+        z-index: 1;
+      }
+    }
+  }
+  //下边指示器
+  .indicator {
+    display: none;
+    position: relative;
+    list-style-type: none;
+    padding-left: 0;
+    width: 140px;
+    height: 1.5%;
+    margin: 20px auto 0;
+    li {
+      background: rgba(255, 255, 255, 0.1);
+      width: 20px;
+      height: 100%;
+      position: absolute;
+      cursor: pointer;
+      &.active {
+        background: #3fbee5;
+      }
+    }
+  }
+}

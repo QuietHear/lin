@@ -1,0 +1,161 @@
+.bigCarousel {
+  width: 1187px;
+  height: 626px;
+  margin: 0 auto;
+  position: relative; }
+  .bigCarousel .controls {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 268px;
+    z-index: 10;
+    cursor: pointer; }
+    .bigCarousel .controls img {
+      width: 100%;
+      height: 100%;
+      display: none; }
+      .bigCarousel .controls img.normal {
+        display: block; }
+    .bigCarousel .controls.prv-btn {
+      left: -25%; }
+      .bigCarousel .controls.prv-btn:hover img.normal {
+        display: none; }
+      .bigCarousel .controls.prv-btn:hover img.active {
+        display: block; }
+    .bigCarousel .controls.next-btn {
+      right: -25%; }
+      .bigCarousel .controls.next-btn:hover img.normal {
+        display: none; }
+      .bigCarousel .controls.next-btn:hover img.active {
+        display: block; }
+  .bigCarousel .list {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    list-style-type: none;
+    position: relative; }
+    .bigCarousel .list .item {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: auto;
+      right: 0;
+      opacity: 0;
+      background: url("../img/yuanxiaochenggong/carousel_bg.png") no-repeat;
+      background-size: contain; }
+@keyframes moveLeft {
+  from {
+    right: 28%; }
+  to {
+    right: 36%; } }
+@keyframes leaveLeft {
+  from {
+    right: 36%; }
+  to {
+    right: 28%; } }
+@keyframes moveRight {
+  from {
+    left: 28%; }
+  to {
+    left: 36%; } }
+@keyframes leaveRight {
+  from {
+    left: 36%; }
+  to {
+    left: 28%; } }
+@keyframes topLeft {
+  from {
+    right: -4%; }
+  to {
+    right: 0; } }
+@keyframes topRight {
+  from {
+    left: -4%; }
+  to {
+    left: 0; } }
+@keyframes topJump {
+  from {
+    transform: scale(0.8, 0.95); }
+  to {
+    transform: scale(1, 1); } }
+      .bigCarousel .list .item a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative; }
+        .bigCarousel .list .item a > img {
+          width: 100%;
+          height: 100%; }
+        .bigCarousel .list .item a .content {
+          display: none;
+          height: 100%;
+          padding: 70px; }
+          .bigCarousel .list .item a .content .logo {
+            width: 212px;
+            height: 45px; }
+          .bigCarousel .list .item a .content .title {
+            font-size: 30px;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 15px;
+            margin: 25px 0 40px; }
+          .bigCarousel .list .item a .content ::-webkit-scrollbar {
+            width: 8px;
+            height: 100%; }
+          .bigCarousel .list .item a .content ::-webkit-scrollbar-track {
+            background-color: #072932; }
+          .bigCarousel .list .item a .content ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: #04ffcc; }
+          .bigCarousel .list .item a .content .msg {
+            padding: 0 15px;
+            display: flex; }
+            .bigCarousel .list .item a .content .msg .left {
+              word-break: break-all;
+              max-height: 335px;
+              overflow-y: auto;
+              text-align: justify;
+              min-width: 505px;
+              text-indent: 2em;
+              line-height: 1.5; }
+            .bigCarousel .list .item a .content .msg img {
+              margin-left: 10px;
+              width: 502px;
+              height: 335px; }
+      .bigCarousel .list .item.moveLeft {
+        right: 36%;
+        left: auto; }
+      .bigCarousel .list .item.moveRight {
+        left: 36%; }
+      .bigCarousel .list .item.top {
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1; }
+        .bigCarousel .list .item.top a .content {
+          display: block; }
+      .bigCarousel .list .item.middle {
+        z-index: 5;
+        opacity: 0.5; }
+      .bigCarousel .list .item.bottom {
+        z-index: 1; }
+  .bigCarousel .indicator {
+    display: none;
+    position: relative;
+    list-style-type: none;
+    padding-left: 0;
+    width: 140px;
+    height: 1.5%;
+    margin: 20px auto 0; }
+    .bigCarousel .indicator li {
+      background: rgba(255, 255, 255, 0.1);
+      width: 20px;
+      height: 100%;
+      position: absolute;
+      cursor: pointer; }
+      .bigCarousel .indicator li.active {
+        background: #3fbee5; }
+
+/*# sourceMappingURL=3dCarousel.css.map */
