@@ -82,6 +82,20 @@
 </section>
 <script src="js/jquery1.9.min.js"></script>
 <script>
+    $('.section .xpst').on('click', function () {
+        window.open('西普生态.html');
+    });
+    $('.section .yxcg').on('click', function () {
+        window.open('院校成功.html');
+    });
+    $('.section .kctx .gear').on('click', function () {
+        $('.top').addClass($(this).attr('class').replace('gear', '').trim());
+        $(this).addClass('active');
+    });
+    $('.top .close-img').on('click', function () {
+        $(this).closest('div').attr('class', 'top');
+        $('.section .kctx .gear.active').removeClass('active');
+    });
     $(document).ready(function () {
         $.ajax({
             type: 'GET',
@@ -151,20 +165,6 @@
                 }
             }
         });
-    });
-    $('.section .xpst').on('click', function () {
-        window.open('西普生态.html');
-    });
-    $('.section .yxcg').on('click', function () {
-        window.open('院校成功.html');
-    });
-    $('.section .kctx .gear').on('click', function () {
-        $('.top').addClass($(this).attr('class').replace('gear', '').trim());
-        $(this).addClass('active');
-    });
-    $('.top .close-img').on('click', function () {
-        $(this).closest('div').attr('class', 'top');
-        $('.section .kctx .gear.active').removeClass('active');
     });
 </script>
 </body>
