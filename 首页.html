@@ -20,9 +20,9 @@
             <div class="xpst">
                 <img class="bg" src="img/home/xpst.png">
                 <div class="tit">西普生态</div>
-                <p class="school"><i class="icon icon-school"></i>服务院校&nbsp;<em>0</em>&nbsp;所</p>
-                <p class="enterprise"><i class="icon icon-enterprise"></i>合作企业&nbsp;<em>0</em>&nbsp;家</p>
-                <p class="student"><i class="icon icon-student"></i>培养学生&nbsp;<em>0</em>&nbsp;人</p>
+                <p class="school"><i class="icon icon-school"></i>服务院校&nbsp;<em></em>&nbsp;所</p>
+                <p class="enterprise"><i class="icon icon-enterprise"></i>合作企业&nbsp;<em></em>&nbsp;家</p>
+                <p class="student"><i class="icon icon-student"></i>培养学生&nbsp;<em></em>&nbsp;人</p>
             </div>
             <div class="yxgk">
                 <img class="bg" src="img/home/yxgk.png">
@@ -33,21 +33,9 @@
                 <img class="bg" src="img/home/cptx.png">
                 <div class="tit">产品体系</div>
                 <img class="detail" src="img/home/cptx_detail.png">
-                <p class="dsj">
-                    <span>实验教学</span>
-                    <span>科研实训</span>
-                    <span>以赛促学</span>
-                </p>
-                <p class="wlaq">
-                    <span>网络教学</span>
-                    <span>专长培训</span>
-                    <span>靶场经济</span>
-                </p>
-                <p class="rgzn">
-                    <span>实验教学</span>
-                    <span>科研&实训</span>
-                    <span>无人驾驶</span>
-                </p>
+                <p class="dsj"></p>
+                <p class="wlaq"></p>
+                <p class="rgzn"></p>
             </div>
         </div>
         <div class="center">
@@ -138,14 +126,15 @@
 <script src="js/jquery1.9.min.js"></script>
 <script>
     $(document).ready(function () {
-        // $.ajax({
-        //     type: 'GET',
-        //     url: 'data/home.json',
-        //     dataType: 'json',
-        //     success: function (data) {
-        //         console.log(JSON.parse(data))
-        //     }
-        // });
+        $.ajax({
+            type: 'GET',
+            url: 'data/home.json',
+            dataType: 'json',
+            success: function (data) {
+                console.log(JSON.parse(data))
+                
+            }
+        });
         // 数量大于3时
         let $parent = $('.section .yxcg .content');
         let str = $parent.html();
@@ -191,7 +180,7 @@
         $(this).addClass('active');
     });
     $('.top .close-img').on('click', function () {
-        $(this).closest('div').attr('class','top');
+        $(this).closest('div').attr('class', 'top');
         $('.section .kctx .gear.active').removeClass('active');
     });
 </script>

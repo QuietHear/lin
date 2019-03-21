@@ -236,7 +236,9 @@ section.home .section {
       cursor: pointer; }
       section.home .section .left .xpst p {
         font-size: 19px;
-        padding-left: 40px; }
+        padding-left: 40px;
+        overflow: hidden;
+        white-space: nowrap; }
         section.home .section .left .xpst p i {
           margin-right: 10px; }
         section.home .section .left .xpst p em {
@@ -262,7 +264,10 @@ section.home .section {
         position: absolute;
         width: 69px;
         text-align: center;
-        line-height: 1.5; }
+        line-height: 1.5;
+        overflow: hidden; }
+        section.home .section .left .cptx p span {
+          white-space: nowrap; }
       section.home .section .left .cptx .dsj {
         left: 47px;
         top: 54px; }
@@ -359,7 +364,8 @@ section.home .section {
               section.home .section .right .yxcg .content .group .row .item p {
                 font-size: 12px;
                 text-align: center;
-                line-height: 1.5; }
+                line-height: 1.5;
+                overflow: hidden; }
 section.home .footer {
   background: url("../img/home/home_tab.png") 100% 100% no-repeat;
   width: 1788px;

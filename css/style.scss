@@ -48,6 +48,8 @@ section {
           p {
             font-size: 19px;
             padding-left: 40px;
+            overflow: hidden;
+            white-space: nowrap;
             i {
               margin-right: 10px;
             }
@@ -85,6 +87,10 @@ section {
             width: 69px;
             text-align: center;
             line-height: 1.5;
+            overflow: hidden;
+            span{
+              white-space: nowrap;
+            }
           }
           .dsj {
             left: 47px;
@@ -208,6 +214,7 @@ section {
                     font-size: 12px;
                     text-align: center;
                     line-height: 1.5;
+                    overflow: hidden;
                   }
                 }
               }
