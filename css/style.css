@@ -264,10 +264,12 @@ section.home .section {
         position: absolute;
         width: 69px;
         text-align: center;
-        line-height: 1.5;
-        overflow: hidden; }
+        line-height: 1.5; }
         section.home .section .left .cptx p span {
-          white-space: nowrap; }
+          white-space: nowrap;
+          overflow: hidden;
+          display: inline-block;
+          width: 100%; }
       section.home .section .left .cptx .dsj {
         left: 47px;
         top: 54px; }

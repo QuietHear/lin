@@ -103,50 +103,54 @@
                 data.cptx.wlaq.forEach(function (item) {
                     $('.section .cptx .wlaq').append(`<span>${item}</span>`);
                 });
-                
-                // <div class="row">
-                //         <div class="item">
-                //         <div class="logo">
-                //         <img src="img/college-logo/anh01.png">
-                //         </div>
-                //         <p>1</p>
-                //         </div>
-                //         </div>
+                let num = Math.ceil(data.yxcg.length / 3);
+                for (let i = 0; i < num; i++) {
+                    let str = '';
+                    for (let x = 0; x < 3; x++) {
+                        str += data.yxcg[3 * i + x] === undefined ? '' : `<div class="item">
+                            <div class="logo">
+                            <img src="img/college-logo/${data.yxcg[3 * i + x].logo}">
+                            </div>
+                            <p>${data.yxcg[3 * i + x].name}</p>
+                           </div>`;
+                    }
+                    $('.section .yxcg .group').append(`<div class="row">${str}</div>`);
+                }
             }
         });
         // 数量大于3时
-        let $parent = $('.section .yxcg .content');
-        let str = $parent.html();
-        $parent.html(str + str);
-        let height = $parent.children('.group:first-child').css('top', 0).height();
-        let vy = 50;
-        $parent.children('.group:last-child').css('top', height + 12);
-        let count = 0;
-        let scroll = function () {
-            if (count % 2 === 0) {
-                $parent.children('.group:first-child').animate({
-                    top: -height - 12
-                }, height / vy * 1000, function () {
-                    $(this).css('top', height + 12);
-                });
-                $parent.children('.group:last-child').animate({
-                    top: 0
-                }, height / vy * 1000);
-            }
-            else {
-                $parent.children('.group:last-child').animate({
-                    top: -height - 12
-                }, height / vy * 1000, function () {
-                    $(this).css('top', height + 12);
-                });
-                $parent.children('.group:first-child').animate({
-                    top: 0
-                }, height / vy * 1000);
-            }
-            count = (count + 1) > 1 ? 0 : (count + 1);
-        };
-        setInterval(scroll, height / vy * 1000);
-        scroll();
+        // let $parent = $('.section .yxcg .content');
+        // let str = $parent.html();
+        // $parent.html(str + str);
+        // let height = $parent.children('.group:first-child').css('top', 0).height();
+        // let vy = 50;
+        // $parent.children('.group:last-child').css('top', height + 12);
+        // let count = 0;
+        // let scroll = function () {
+        //     if (count % 2 === 0) {
+        //         $parent.children('.group:first-child').animate({
+        //             top: -height - 12
+        //         }, height / vy * 1000, function () {
+        //             $(this).css('top', height + 12);
+        //         });
+        //         $parent.children('.group:last-child').animate({
+        //             top: 0
+        //         }, height / vy * 1000);
+        //     }
+        //     else {
+        //         $parent.children('.group:last-child').animate({
+        //             top: -height - 12
+        //         }, height / vy * 1000, function () {
+        //             $(this).css('top', height + 12);
+        //         });
+        //         $parent.children('.group:first-child').animate({
+        //             top: 0
+        //         }, height / vy * 1000);
+        //     }
+        //     count = (count + 1) > 1 ? 0 : (count + 1);
+        // };
+        // setInterval(scroll, height / vy * 1000);
+        // scroll();
     });
     $('.section .xpst').on('click', function () {
         window.open('西普生态.html');
