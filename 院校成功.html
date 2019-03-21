@@ -18,47 +18,11 @@
                 <img class="normal" src="img/yuanxiaochenggong/btn_l.png">
                 <img class="active" src="img/yuanxiaochenggong/btn_l_hover.png">
             </div>
-            <!--轮播区域-->
-            <ul class="list">
-                <li class="item">
-                    <a class="active">
-                        <div class="content">
-                            <img class="logo" src="img/yuanxiaochenggong/dsj/logo1.png">
-                            <p class="title">111</p>
-                            <div class="msg">
-                                <div class="left">11111111111</div>
-                                <img src="img/yuanxiaochenggong/dsj/img1.jpg">
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="item">
-                    <a>
-                        <div class="content">
-                            2
-                        </div>
-                    </a>
-                </li>
-                <li class="item">
-                    <a>
-                        <div class="content">
-                            3
-                        </div>
-                    </a>
-                </li>
-                <li class="item">
-                    <a>
-                        <div class="content">
-                            4
-                        </div>
-                    </a>
-                </li>
-            </ul>
+            <ul class="list"></ul>
             <div class="controls next-btn">
                 <img class="normal" src="img/yuanxiaochenggong/btn_r.png">
                 <img class="active" src="img/yuanxiaochenggong/btn_r_hover.png">
             </div>
-            <!--提示区域-->
             <ul class="indicator"></ul>
         </div>
     </div>
@@ -73,8 +37,31 @@
 <script type="text/javascript" src="js/3dCarousel.js"></script>
 <script src="js/main.js"></script>
 <script>
+    var allData;
     $(document).ready(function () {
+        $.ajax({
+            type: 'GET',
+            url: 'data/yuanxiaochenggong.json',
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                allData = {...data};
+                console.log(allData);
+            }
+        });
         bigCarousel.start();
+        // <li class="item">
+        //         <a class="active">
+        //         <div class="content">
+        //         <img class="logo" src="img/yuanxiaochenggong/dsj/logo1.png">
+        //         <p class="title">111</p>
+        //         <div class="msg">
+        //         <div class="left">11111111111</div>
+        //         <img src="img/yuanxiaochenggong/dsj/img1.jpg">
+        //         </div>
+        //         </div>
+        //         </a>
+        //         </li>
     });
 </script>
 </body>

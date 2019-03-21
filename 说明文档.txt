@@ -6,4 +6,4 @@
   政企合作弹窗：'img/xipushengtai/zqhz'中添加logo后到数据中的"zqhz"数组添加对应图片名
   认证培训弹窗：'img/xipushengtai/rzpx'中添加logo后到数据中的"rzpx"数组添加对应图片名、标题及内容
   合作项目弹窗：页面中对应HTML修改
-院校成功（data/yuanxiaochenggong.json）：
+院校成功（data/yuanxiaochenggong.json）：---每个种类最少三条数据
