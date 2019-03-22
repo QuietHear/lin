@@ -27,7 +27,7 @@
             <div class="yxgk">
                 <img class="bg" src="img/home/yxgk.png">
                 <div class="tit">院校概况</div>
-                1
+                <div class="chart"></div>
             </div>
             <div class="cptx">
                 <img class="bg" src="img/home/cptx.png">
@@ -81,6 +81,7 @@
     </div>
 </section>
 <script src="js/jquery1.9.min.js"></script>
+<script src="js/echarts.min.js"></script>
 <script>
     $('.section .xpst').on('click', function () {
         window.open('西普生态.html');
@@ -106,6 +107,43 @@
                 $('.section .xpst .school em').text(data.xpst.school);
                 $('.section .xpst .enterprise em').text(data.xpst.enterprise);
                 $('.section .xpst .student em').text(data.xpst.student);
+                let myChart = echarts.init($('.section .yxgk .chart')[0]);
+                let option = {
+                    color: ['#1269c5', '#9091ff', '#c16bf1', '#5146b7', '#00adc3'],
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                    },
+                    textStyle: {
+                        fontSize: 15
+                    },
+                    series: [
+                        {
+                            name: data.yxgk.inData.name,
+                            type: 'pie',
+                            selectedMode: 'single',
+                            radius: [0, '30%'],
+                            label: {
+                                normal: {
+                                    position: 'inner'
+                                }
+                            },
+                            labelLine: {
+                                normal: {
+                                    show: false
+                                }
+                            },
+                            data: data.yxgk.inData.data
+                        },
+                        {
+                            name: data.yxgk.outData.name,
+                            type: 'pie',
+                            radius: ['48%', '58%'],
+                            data: data.yxgk.outData.name
+                        }
+                    ]
+                };
+                myChart.setOption(option);
                 data.cptx.dsj.forEach(function (item) {
                     $('.section .cptx .dsj').append(`<span>${item}</span>`);
                 });

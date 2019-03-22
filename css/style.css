@@ -253,6 +253,9 @@ section.home .section {
     section.home .section .left .yxgk {
       height: 233px;
       margin: 47px 0; }
+      section.home .section .left .yxgk .chart {
+        width: 100%;
+        height: 100%; }
     section.home .section .left .cptx {
       height: 233px;
       padding-top: 26px; }
