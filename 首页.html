@@ -105,7 +105,6 @@
             url: 'data/home.json',
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 $('.section .xpst .school em').text(data.xpst.school);
                 $('.section .xpst .enterprise em').text(data.xpst.enterprise);
                 $('.section .xpst .student em').text(data.xpst.student);
@@ -205,6 +204,9 @@
                         itemStyle: {
                             normal: {
                                 borderColor: '#25a2d3'
+                            },
+                            emphasis:{
+                                backgroundColor:'red'
                             }
                         },
                         label: {
