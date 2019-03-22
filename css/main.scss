@@ -61,6 +61,7 @@ ul, ol {
   top: 0;
   display: none;
   z-index: 1000;
+  background: rgba(0,0,0,.3);
   &.show {
     display: block;
   }

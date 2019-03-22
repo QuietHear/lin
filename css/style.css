@@ -48,7 +48,8 @@ ul, ol {
   left: 0;
   top: 0;
   display: none;
-  z-index: 1000; }
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3); }
   .pop-bg.show {
     display: block; }
   .pop-bg .pop {
