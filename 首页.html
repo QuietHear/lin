@@ -40,7 +40,7 @@
         </div>
         <div class="center">
             <img class="bg" src="img/home/dt.png">
-            1
+            <div id="map"></div>
         </div>
         <div class="right">
             <div class="kctx">
@@ -82,6 +82,7 @@
 </section>
 <script src="js/jquery1.9.min.js"></script>
 <script src="js/echarts.min.js"></script>
+<script src="js/china.js"></script>
 <script>
     $('.section .xpst').on('click', function () {
         window.open('西普生态.html');
@@ -97,6 +98,7 @@
         $(this).closest('div').attr('class', 'top');
         $('.section .kctx .gear.active').removeClass('active');
     });
+
     $(document).ready(function () {
         $.ajax({
             type: 'GET',
@@ -153,6 +155,70 @@
                 data.cptx.wlaq.forEach(function (item) {
                     $('.section .cptx .wlaq').append(`<span>${item}</span>`);
                 });
+                let mapChart = echarts.init($('#map')[0]);
+                let mapOption = {
+                    backgroundColor: 'transparent',
+                    tooltip: {
+                        trigger: 'item',
+                        enterable: true,
+                        backgroundColor: 'transparent',
+                        position: function (arr) {
+                            if (event.pageX + 346 > $(window).width()) {
+                                arr[0] = event.offsetX - 346;
+                            }
+                            if (event.pageY + 271 > $(window).height()) {
+                                arr[1] = event.offsetY - 271;
+                            }
+                            return arr;
+                        },
+                        formatter: function (params, ticket, callback) {
+                            let listStr = '';
+                            if (params.data !== undefined && params.data.logo !== undefined) {
+                                params.data.logo.forEach(function (item) {
+                                    listStr += `<img src="img/college-logo/${item}">`;
+                                });
+                            }
+                            let str = `
+                <div class="mapTip">
+                    <p>${params.name}服务院校--${params.value}</p>
+                    <div class="list">${listStr}</div>
+                </div>`;
+                            return params.name !== '' ? str : '';
+                        }
+                    },
+                    visualMap: {
+                        show: false,
+                        x: 'left',
+                        y: 'bottom',
+                        splitList: [
+                            {start: 500, end: 600}, {start: 400, end: 500},
+                            {start: 300, end: 400}, {start: 200, end: 300},
+                            {start: 100, end: 200}, {start: 0, end: 100},
+                        ],
+                        color: ['#0b2b88', '#02154c']
+                    },
+                    series: [{
+                        name: '全国数据',
+                        type: 'map',
+                        mapType: 'china',
+                        roam: true,
+                        itemStyle: {
+                            normal: {
+                                borderColor: '#25a2d3'
+                            }
+                        },
+                        label: {
+                            normal: {
+                                show: false
+                            },
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        data: data.map
+                    }]
+                };
+                mapChart.setOption(mapOption);
                 $('.section .yxcg .content').append('<div class="group"></div>');
                 let num = Math.ceil(data.yxcg.length / 3);
                 for (let i = 0; i < num; i++) {
