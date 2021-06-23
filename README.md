@@ -1,11 +1,11 @@
 # 功能展示
-[点此观看](https://quiethear.github.io/temporary-1/首页.html "首页")(建议右键新建窗口查看)
+[点此观看](https://quiethear.github.io/temporary-1/index.html "首页")(建议右键新建窗口查看)
 
 # 注意
 此项目适用1920*1080全屏模式下观看
 
 # 使用文档（修改数据）
-1.首页（data/home.json）
+1.index（data/home.json）
 > * `西普生态`：'*xpst*'中修改3个对应数据
 > * `院校概况`：'*yxgk*'中的 inData 和 outData 中分别修改内圆/外圆的总标题和对应数据
 > * `产品体系`：'*cptx*'中修改3个对应数据

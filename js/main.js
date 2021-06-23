@@ -1,3 +1,7 @@
+/*
+ * @LastEditors: afei
+ * @LastEditTime: 2021-06-23 13:58:11
+ */
 $('body').on('click', '.pop .close', function () {
     $(this).closest('.pop').removeClass('show');
     if ($('.pop-bg').find('.pop.show').length === 0) {
@@ -10,5 +14,5 @@ let showPop = (str) => {
 };
 
 $('.back').on('click',function () {
-   location.href='首页.html';
+   location.href='index.html';
 });

@@ -1,86 +1,17 @@
-.icon-close {
-  width: 16px;
-  height: 16px;
-  background-position: -31px -97px;
-  opacity: .5; }
-
-.icon-close-else {
-  width: 16px;
-  height: 16px;
-  background-position: -3px -97px;
-  opacity: .5; }
-
-.icon-close:hover, .icon-close-else:hover {
-  opacity: 1; }
-
-.icon-open {
-  width: 12px;
-  height: 7px;
-  background-position: -20px 0; }
-
-.icon-shrink {
-  width: 12px;
-  height: 7px;
-  background-position: -42px 0; }
-
-.icon-shrink-tit {
-  width: 10px;
-  height: 6px;
-  background-position: 0 0; }
-
-.icon-time {
-  width: 16px;
-  height: 16px;
-  background-position: 0 -12px; }
-
-.icon-time-tit {
-  width: 16px;
-  height: 16px;
-  background-position: 0 -33px; }
-
-.icon-see {
-  width: 20px;
-  height: 14px;
-  background-position: -26px -13px; }
-
-.icon-see-tit {
-  width: 20px;
-  height: 14px;
-  background-position: -26px -34px; }
-
-.icon-downland {
+.icon-school {
   width: 19px;
-  height: 18px;
-  background-position: -29px -54px; }
+  height: 22px;
+  background-position: -7px -5px;
+}
 
-.icon-downland-tit {
+.icon-enterprise {
   width: 19px;
+  height: 21px;
+  background-position: -38px -6px;
+}
+
+.icon-student {
+  width: 20px;
   height: 18px;
-  background-position: 0 -54px; }
-
-.icon-circle-tit {
-  width: 7px;
-  height: 7px;
-  background-position: -5px -81px; }
-
-.icon-success {
-  width: 70px;
-  height: 70px;
-  background-position: -165px 0; }
-
-.icon-fail {
-  width: 70px;
-  height: 70px;
-  background-position: -66px 0; }
-
-.icon-logo {
-  width: 64px;
-  height: 47px;
-  background-position: -69px -74px; }
-
-.icon-date {
-  width: 16px;
-  height: 16px;
-  background-position: 0 -122px; }
-
-/*# sourceMappingURL=icon1.css.map */
+  background-position: -69px -9px;
+}
